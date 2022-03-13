@@ -6,11 +6,15 @@ module.exports = {
     // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
     ssr: false,
 
+    router: { 
+        mode: 'hash'
+    },
+    
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
 
     publicRuntimeConfig: {
-        isDesktop: false,
+        isDesktop: true,
         isDistributing: true,
     },
 

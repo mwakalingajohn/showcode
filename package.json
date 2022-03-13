@@ -2,11 +2,14 @@
     "name": "showcode",
     "version": "1.0.0",
     "description": "Generate beautiful images of code.",
+    "main": "desktop.js",
     "scripts": {
         "dev": "nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
-        "generate": "nuxt generate"
+        "generate": "nuxt generate",
+        "electron": "electron desktop.js",
+        "app:dist": "electron-builder"
     },
     "dependencies": {
         "@nuxt/postcss8": "^1.1.3",
@@ -41,5 +44,16 @@
         "vue-advanced-cropper": "^1.10.0",
         "vue-feather-icons": "^5.1.0",
         "vue-tailwind": "^2.5.0"
-    }
+    },
+    "devDependencies": {
+        "electron": "^17.1.2",
+        "electron-builder": "^22.14.13",
+        "electron-devtools-installer": "^3.2.0"
+    },
+    "build": {
+        "appId": "showcode.id",
+        "mac": {
+          "category": "showcode.productivity"
+        }
+      }
 }

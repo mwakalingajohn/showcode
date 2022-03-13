@@ -6,8 +6,8 @@ import {
     BUNDLED_LANGUAGES,
 } from '@stevebauman/shiki';
 
-setCDN('/shiki/');
-setWasm('/shiki/dist/onig.wasm');
+setCDN('./shiki/');
+setWasm('./shiki/dist/onig.wasm');
 
 const preloadedThemes = ['github-light'];
 const preloadedLangs = ['html', 'xml', 'sql', 'javascript', 'json', 'css', 'php'];
